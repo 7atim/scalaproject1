@@ -1,0 +1,12 @@
+GET /               controllers.Application.index
+
+GET  /developers      controllers.Developers.list
+POST /developers      controllers.Developers.save
+GET  /developers/new  controllers.Developers.newDeveloper
+GET  /remove/:id  controllers.Developers.remove(id: Long)
+GET  /edit/:id  controllers.Developers.editDeveloper(id: Long)
+GET  /developers/:id controllers.Developers.show(id: Long)
+
+GET /barcode/:id   controllers.Barcodes.barcode(id: Long)
+
+GET /assets/*file   controllers.Assets.at(path="/public", file)

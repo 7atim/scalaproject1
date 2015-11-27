@@ -1,0 +1,18 @@
+@(developers: List[Developer])(implicit flash: Flash, lang: Lang)
+
+@main(Messages("application.name")) {
+
+  <dl class="products">
+    @for(developer <- developers) {
+      <dt>
+          <a href="@controllers.routes.Developers.show(developer.id)">
+              @developer.name
+          </a>
+      </dt>
+      <dd>@developer.description</dd>
+    }
+  </dl>
+
+  <p><a href="@controllers.routes.Developers.newDeveloper()" class="btn">
+    <i class="icon-plus"></i> @Messages("developers.new.command")</a></p>
+}

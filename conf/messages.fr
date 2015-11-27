@@ -1,0 +1,16 @@
+application.name = Liste des Developeur
+
+id = Identifiant
+name = Nom
+description = Descriptif
+
+developers.details = Dev: {0}
+developers.form =  Dev Details
+developers.new = (nouveau)
+developers.new.command = Ajouter
+developers.new.submit = Ajouter
+developers.new.success = Dev {0} ajouté.
+developers.remove.command = Supprimer
+
+validation.errors = Veuillez corriger les erreurs sur le formulaire
+validation.id.duplicate = Un Dev avec cet ID existe déja

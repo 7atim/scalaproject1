@@ -1,0 +1,20 @@
+@(developerForm: Form[Developer])(implicit flash: Flash, lang: Lang)
+@import helper._
+@import helper.twitterBootstrap._
+
+@main(Messages("developers.form")) {
+  <h2>@Messages("developers.form")</h2>
+
+  @helper.form(action = routes.Developers.save()) {
+    <fieldset>
+      <legend>
+        @Messages("developers.details", Messages("developers.new"))
+      </legend>
+      @helper.inputText(developerForm("id"))
+      @helper.inputText(developerForm("name"))
+      @helper.textarea(developerForm("description"))
+    </fieldset>
+    <p><input type="submit" class="btn primary"
+        value='@Messages("developers.new.submit")'></p>
+  }
+}

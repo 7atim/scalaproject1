@@ -1,0 +1,23 @@
+@(developer: Developer)(implicit flash: Flash, lang: Lang)
+
+@main(Messages("developers.details", developer.name)) {
+  
+  <h2>
+   
+    @Messages("developers.details", developer.name)
+  </h2>
+
+  <dl class="dl-horizontal">
+    <dt>@Messages("id"):</dt>
+    <dd>@developer.id</dd>
+
+    <dt>@Messages("name"):</dt>
+    <dd>@developer.name</dd>
+
+    <dt>@Messages("description"):</dt>
+    <dd>@developer.description</dd>
+  </dl>
+
+  <p><a href="@controllers.routes.Developers.remove(developer.id)" class="btn">
+    <i class="icon-remove"></i> @Messages("developers.remove.command")</a></p>
+}
